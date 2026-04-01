@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container mt-5 mb-5 text-center">
+    <h2 class="text-success">Training Successful</h2>
+    <p class="mt-3">Your Model Is Now Ready For Prediction</p>
+    <h3 style="color: deeppink;">Confusion Matrix</h3>
+{% if accuracy %}
+  <h3 style="color: darkred;">Accuracy: {{ accuracy }}%</h3>
+  
+  <img src="{{ url_for('static', filename='confusion_matrix.png') }}" width="400">
+{% endif %}
+<br><br>
+
+<a href="{{ url_for('predict') }}">
+    <button>Go to Prediction</button>
+</a> 
+<form action="/logout" method="post" style="display:inline;">
+    <button type="submit">Logout</button>
+</form>
+</div>
+{% endblock %}
+
+
+
+
+

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container mt-5 text-center">
+    <h2>Fake Image Prediction</h2>
+    <p>Upload An Image To Check Whether It Is <b>FAKE</b> or <b>REAL</b></p>
+    <body>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% for category, message in messages %}
+        <p>{{ message }}</p>
+        {% endfor %}
+        {% endwith %}
+        <form method="POST" enctype="multipart/form-data">
+            <input type="file" name="file" required><br><br>
+            <button type="submit">Predict Image</button>
+        </form>
+        <form action="/logout" method="post" style="display:inline;">
+                <button type="submit">Logout</button>
+            </form>
+        {% if prediction %}
+        <div style="color: red; font-weight: bold; background-color: lightblue; padding: 20px;" class="result">
+            {{ prediction }}
+        </div>
+        <img src="{{ image_path }}"width="300">
+        {% endif %}
+        <br><br>
+    </body>
+</div>
+{% endblock %}
+
+
+
