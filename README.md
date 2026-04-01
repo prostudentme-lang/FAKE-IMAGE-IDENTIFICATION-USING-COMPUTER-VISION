@@ -1,202 +1,74 @@
-🚦 AUTOMATIC TOLL COLLECTION SYSTEM USING CAMERA AND MACHINE LEARNING
+1. Problem Statement   
+With the increasing availability of image manipulation software and AIgenerated images, it is difficult for humans to distinguish between real and fake images. Manual verification is time-consuming and unreliable. Hence, there is a need for an intelligent system that can automatically detect fake images accurately and efficiently   
+ 
+   
+2. Objective of the Project   
+•	To study the concept of fake image generation and manipulation.   
+•	To design a computer vision-based system for fake image identification.   
+•	To train a deep learning model using real and fake image datasets.   
+•	To develop a user-friendly web interface for image verification.   
+•	To evaluate the performance of the system based on accuracy .   
+   
+   
+ 
+3. Proposed Solution / Project Description   
+•	Automatic detection of fake images   
+•	Deep learning-based classification   
+•	Large dataset training for better accuracy   
+•	Simple and interactive web interface   
+•	Fast and reliable image verification   
+ 
+ 
+    
+4. Scope of the Project   
+The scope of this project is limited to identifying fake images in image format (JPEG/PNG/JPG). The system focuses on detecting images that are manipulated or generated using AI techniques. This project can be further extended to video deepfake detection, mobile applications, and real-time monitoring systems.   
+  
+5. Tools / Technologies Used   
+•	Programming Language: Python   
+•	Libraries: PyTorch, OpenCV, NumPy   
+•	Framework: Flask   
+•	Frontend: HTML, CSS   
+•	Operating System: Windows / Linux / macOS   
+    
+  
+6. Methodology / Approach   
+•	Dataset Collection:   
+Real images are collected from datasets such as CelebA and FFHQ, while fake images are obtained from GAN-generated image datasets.   
+•	Preprocessing:   
+Images are resized, normalized, and augmented to improve model performance. 
+•	Model Training:   
+Convolutional Neural Network (CNN) using transfer learning is trained to classify images as real or fake.   
+•	System Development:   
+Flask-based web application is developed where users can upload images for verification.   
+   
+   
+7. Expected Outcome   
+The system is expected to accurately classify images as real or fake with high precision. The project will provide a practical and efficient solution for fake image detection and demonstrate the effective use of computer vision in solving real-world problems.   
+   
+ 
+8. Applications   
+•	Fake news detection   
+•	Digital forensics   
+•	Social media content verification   
+•	Cybercrime investigation   
+•	Media authentication systems   
+   
+   
+9. Advantages   
+•	Reduces human effort in image verification.   
+•	High accuracy using deep learning techniques.   
+•	Easy-to-use web interface.   
+•	Cost-effective and scalable solution.   
+   
+ 
+10. Conclusion   
+   
+Fake image identification is an important problem in today’s digital world. This project successfully demonstrates the use of computer vision and deep learning to detect fake images. The developed system is efficient, reliable, and can be further enhanced to handle advanced deepfake detection 
+ 
+11. Reference  
+ 
+•	Chopda, S., & Sharma, P. (2025). AI-Based Fake Image Detection using Digital Forensic Imaging Techniques. This paper presents a hybrid system that combines deep learning (MobileNetV2) with traditional forensic techniques like Error Level Analysis (ELA) and PRNU for enhanced accuracy 
+•	Tolosana, R., Vera-Rodriguez, R., Fierrez, J., & Ortega-Garcia, J. Research and surveys on deepfake detection methods, often involving the use of deep learning models like CNNs and RNNs. 
+•	Verdoliva, L,. Media forensics and deepfakes: an overview. This is an overview paper that provides a solid foundation on the topic of media forensics, a key area for your project. 
+•	Mittal, A., Moorthy, A. K., & Bovik, A. C. (2012). A foundational paper on no-reference image quality assessment, a related field that sometimes overlaps with artifact detection in fake images 
 
-CHAPTER 1: 
-INTRODUCTION 1.1 Overview
-
-With the rapid growth of road transportation, toll plazas face major challenges such as traffic congestion, fuel wastage, long waiting times, and manual errors. Traditional toll collection systems require vehicles to stop and pay toll manually, which is inefficient and time-consuming.
-
-The Automatic Toll Collection System using Camera and Machine Learning is designed to automate the toll collection process by identifying vehicles through camera images and calculating toll charges intelligently using Machine Learning techniques.
-
-1.2 Motivation
-
-The motivation behind this project is to:
-
-Reduce human intervention
-
-Improve traffic flow at toll booths
-
-Apply Machine Learning to a real-world problem
-
-Build a smart transportation solution
-
-1.3 Objectives
-
-Automatically register vehicles using camera images
-
-Detect vehicle number plates using image processing
-
-Predict toll charges using Machine Learning
-
-Reduce congestion and processing time
-
-Generate accurate toll transaction data
-
-CHAPTER 2: LITERATURE SURVEY
-
-Several toll collection systems exist such as:
-
-Manual toll collection
-
-RFID-based FASTag systems
-
-Smart card-based systems
-
-However, these systems require physical tags or manual intervention. Recent research focuses on camera-based automatic toll systems using Computer Vision and Machine Learning, which offer higher flexibility and scalability.
-
-This project uses OCR and ML to simulate a smart toll system suitable for academic implementation.
-
-CHAPTER 3: EXISTING SYSTEM 3.1 Description
-
-In the existing system:
-
-Vehicles stop at toll booths
-
-Toll is collected manually
-
-Data is recorded manually
-
-3.2 Drawbacks
-
-Traffic congestion
-
-Human errors
-
-Fuel wastage
-
-No automation
-
-CHAPTER 4: PROPOSED SYSTEM 4.1 Description
-
-The proposed system uses:
-
-Camera images for vehicle detection
-
-OCR for number plate recognition
-
-Machine Learning for toll prediction
-
-Vehicles are automatically registered, and toll fees are calculated without manual input.
-
-4.2 Advantages
-
-Fully automated
-
-Faster processing
-
-Accurate toll calculation
-
-Reduced manpower
-
-CHAPTER 5: SYSTEM ARCHITECTURE
-
-Architecture Flow:
-
-Vehicle Image ↓ Camera Capture ↓ Number Plate Detection (OCR) ↓ Vehicle Classification ↓ Machine Learning Model ↓ Toll Fee Prediction ↓ Report Generation
-
-CHAPTER 6: MODULE DESCRIPTION 6.1 Vehicle Detection Module
-
-Captures vehicle images using a camera (simulated using uploaded images in Google Colab).
-
-6.2 Number Plate Recognition Module
-
-Uses OpenCV and Tesseract OCR to extract vehicle number from images.
-
-6.3 Vehicle Classification Module
-
-Classifies vehicles into categories such as Car, Bus, or Truck.
-
-6.4 Toll Calculation Module
-
-Uses a Linear Regression Machine Learning model to predict toll fees based on:
-
-Vehicle type
-
-Distance traveled
-
-6.5 Report Generation Module
-
-Generates daily toll reports including:
-
-Number of vehicles
-
-Total revenue
-
-CHAPTER 7: TECHNOLOGIES USED Component Technology Programming Language Python Machine Learning Linear Regression Image Processing OpenCV OCR Tesseract Platform Google Colab Libraries NumPy, Pandas, Scikit-learn CHAPTER 8: HARDWARE & SOFTWARE REQUIREMENTS Hardware Requirements
-
-Computer / Laptop
-
-Camera (simulated)
-
-Software Requirements
-
-Google Colab
-
-Python 3.x
-
-CHAPTER 9: ALGORITHM Step-by-Step Algorithm
-
-Start system
-
-Capture vehicle image
-
-Convert image to grayscale
-
-Extract number plate using OCR
-
-Identify vehicle type
-
-Predict toll fee using ML
-
-Display results
-
-Generate report
-
-Stop
-
-CHAPTER 10: RESULTS AND OUTPUT
-
-The system successfully:
-
-Detects vehicle number automatically
-
-Predicts toll fee accurately
-
-Displays entry and exit details
-
-Sample Output: Vehicle Number: MH12AB1234 Vehicle Type: Car Distance: 45 km Predicted Toll Fee: ₹67.50
-
-CHAPTER 11: APPLICATIONS
-
-Highway toll plazas
-
-Smart transportation systems
-
-Smart city infrastructure
-
-Automated parking systems
-
-CHAPTER 12: FUTURE ENHANCEMENTS
-
-Live CCTV camera integration
-
-FASTag payment system
-
-Deep learning-based ANPR
-
-Cloud-based database
-
-Mobile application support
-
-CHAPTER 13: CONCLUSION
-
-The Automatic Toll Collection System using Camera and Machine Learning provides an efficient and intelligent solution for modern toll management. By automating vehicle identification and toll calculation, the system reduces congestion, improves accuracy, and demonstrates the real-world application of Machine Learning and Computer Vision.
-
-CHAPTER 14: REFERENCES
-
-Python Official Documentation
-
-OpenCV Documentation
-
-Scikit-learn Documentation
-
-Research papers on Intelligent Transportation Systems
